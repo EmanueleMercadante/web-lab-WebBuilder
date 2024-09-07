@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (response.ok) {
                 const result = await response.json();
                 alert('Login avvenuto con successo! Benvenuto!');
-                window.location.href = '/dashboard'; // Reindirizza a una dashboard
+                window.location.href = '/index.html'; // Reindirizza a una dashboard
             } else {
                 const error = await response.json();
                 alert('Errore nel login: ' + error.error);
