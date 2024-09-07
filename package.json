@@ -1,12 +1,19 @@
 {
-  "name": "web-lab-webbuilder",
+  "name": "web-lab-web-builder",
   "version": "1.0.0",
+  "description": "Project with login and registration connected to Postgres on Vercel",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vercel dev",
+    "start": "node api/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "pg": "^8.7.1",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "vercel": "^28.3.3"
+  },
+  "author": "Your Name",
+  "license": "MIT"
 }
