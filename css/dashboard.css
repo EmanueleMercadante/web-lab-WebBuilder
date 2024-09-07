@@ -19,6 +19,7 @@ body {
     width: 60px;
     transition: width 0.3s ease;
     overflow: hidden;
+    text-align: center;
 }
 
 .side-menu.expanded {
@@ -26,9 +27,11 @@ body {
 }
 
 .menu-toggle {
-    padding: 20px;
     cursor: pointer;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
 }
 
 .side-menu ul {
@@ -173,4 +176,21 @@ body {
 
 .modal-content button:hover {
     background-color: #0056b3;
+}
+
+
+
+#logout-btn{
+    border-radius: 9px;
+    background-color: #007BFF;
+    border: 2px solid rgb(180, 180, 180);
+    color: white;
+    font-weight: bold;
+    padding: 2px;
+    transition: all 0.4s ease;
+}
+
+#logout-btn:hover{
+    transform: scale(1.05);
+    cursor: pointer;
 }
