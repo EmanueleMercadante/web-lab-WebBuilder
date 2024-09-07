@@ -68,9 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p>Welcome to your dashboard, ${username}!</p>
                 <ul>
                     <li><strong>Email:</strong> ${email}</li>
-                    <li><strong>Projects:</strong> 5 active projects</li>
-                    <li><strong>Messages:</strong> 3 unread messages</li>
-                    <li><strong>Account Created:</strong> January 12, 2023</li>
+                    <li><strong>Projects:</strong>...</li>
+                    <li><strong>Messages:</strong>...</li>
+                    <li><strong>Account Created:</strong>...</li>
                 </ul>
             `;
         } else if (section === 'profile') {
@@ -86,38 +86,34 @@ document.addEventListener('DOMContentLoaded', function() {
                     <label for="password">Change Password:</label>
                     <input type="password" id="password" placeholder="Enter new password"><br><br>
 
-                    <button type="submit">Save Changes</button>
+                    <button type="submit">Save Changes (not avaiable)</button>
                 </form>
             `;
         } else if (section === 'projects') {
             modalContent.innerHTML = `
                 <p>Here are your active projects:</p>
                 <ul>
-                    <li><strong>Project 1:</strong> Website Redesign</li>
-                    <li><strong>Project 2:</strong> Mobile App Development</li>
-                    <li><strong>Project 3:</strong> Backend API Development</li>
+                    <li><strong>Project 1:</strong>...</li>
+                    <li><strong>Project 2:</strong>...</li>
+                    <li><strong>Project 3:</strong>...</li>
                 </ul>
-                <p><a href="#">Create a new project</a></p>
+                <p><a href="#">Create a new project (not avaiable)</a></p>
             `;
         } else if (section === 'messages') {
             modalContent.innerHTML = `
                 <p>You have the following messages:</p>
                 <ul>
-                    <li><strong>Message 1:</strong> "Meeting scheduled for Friday..."</li>
-                    <li><strong>Message 2:</strong> "Update on project status..."</li>
-                    <li><strong>Message 3:</strong> "Invitation to join new project..."</li>
+                    <li><strong>Message 1:</strong> "..."</li>
+                    <li><strong>Message 2:</strong> "..."</li>
+                    <li><strong>Message 3:</strong> "..."</li>
                 </ul>
-                <p><a href="#">View all messages</a> | <a href="#">Compose new message</a></p>
+                <p><a href="#">View all messages (not avaiable)</a> | <a href="#">Compose new message (not avaiable)</a></p>
             `;
         } else if (section === 'settings') {
             modalContent.innerHTML = `
                 <p>Adjust your account settings here:</p>
-                <ul>
-                    <li><label><input type="checkbox" checked> Enable email notifications</label></li>
-                    <li><label><input type="checkbox"> Enable SMS notifications</label></li>
-                    <li><label><input type="checkbox" checked> Make profile public</label></li>
-                </ul>
-                <button>Save Settings</button>
+                <p>...</p>
+                <button>Save Settings (not avaiable)</button>
             `;
         }
 
