@@ -16,10 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     userEmailElement.textContent = email;
     usernameElement.textContent = username;
 
-    // Carica il logo del profilo (puoi gestire immagini specifiche per ogni utente se necessario)
-    const profileLogo = document.getElementById('profile-logo');
-    profileLogo.src = 'path/to/profile-logo.png'; // Sostituisci con il logo corretto per ogni utente
-
     // Gestisci il logout
     const logoutBtn = document.getElementById('logout-btn');
     logoutBtn.addEventListener('click', function() {
