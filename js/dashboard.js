@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Controlla se l'utente è loggato
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     const username = localStorage.getItem('username');
-    const email = localStorage.getItem('email');
+    const email = localStorage.getItem('userEmail');
 
     if (!isLoggedIn || !email) {
         // Se non è loggato, reindirizzalo alla pagina di login
