@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const result = await response.json();
                 alert('Registrazione completata! Benvenuto su Stack, ' + username + '!');
                 form.reset(); // Pulisci il form dopo la registrazione
+                window.location.href = '/login.html';
             } else {
                 const error = await response.json();
                 alert('Errore nella registrazione: ' + error.error);
