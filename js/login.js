@@ -38,7 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (response.ok) {
                 const result = await response.json();
                 alert('Login avvenuto con successo! Benvenuto!');
-                window.location.href = '/index.html'; // Reindirizza a una dashboard
+                
+                // Salva lo stato dell'utente nel localStorage
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userEmail', email);
+
+                // Reindirizza l'utente alla dashboard
+                window.location.href = '/dashboard.html'; // Assicurati di avere questa pagina
             } else {
                 const error = await response.json();
                 alert('Errore nel login: ' + error.error);

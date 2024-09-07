@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/6dd3915e56.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="side-menu" id="sideMenu">
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul>
+                <li data-section="overview"><i class="fas fa-home"></i> <span>Overview</span></li>
+                <li data-section="profile"><i class="fas fa-user"></i> <span>Profile</span></li>
+                <li data-section="projects"><i class="fas fa-project-diagram"></i> <span>Projects</span></li>
+                <li data-section="messages"><i class="fas fa-envelope"></i> <span>Messages</span></li>
+                <li data-section="settings"><i class="fas fa-cog"></i> <span>Settings</span></li>
+            </ul>
+        </div>
+        <div class="content-area">
+            <div class="user-info">
+                <img id="profile-logo" src="path/to/default-logo.png" alt="Profile Logo" class="profile-logo">
+                <h2>Welcome, <span id="username">Username</span></h2>
+                <p>Email: <span id="userEmail">user@example.com</span></p>
+                <button id="logout-btn">Logout</button>
+            </div>
+            <div class="dashboard-content" id="dashboardContent">
+                <h1>Dashboard Overview</h1>
+                <p>Select a menu item to view details.</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="sectionModal">
+        <div class="modal-content">
+            <span class="close-modal">X</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
