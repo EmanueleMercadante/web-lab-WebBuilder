@@ -194,3 +194,7 @@ body {
     transform: scale(1.05);
     cursor: pointer;
 }
+
+.fa-home{
+    color: #007BFF;
+}

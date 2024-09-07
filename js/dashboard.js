@@ -120,3 +120,16 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = "block"; // Mostra il modale
     }
 });
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const homeButton = document.getElementById('home');
+
+    homeButton.addEventListener('click', function() {
+        window.location.href = 'index.html'; // Reindirizza alla pagina index.html
+    });
+});
