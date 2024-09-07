@@ -37,11 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Gestisci la risposta dal server
             if (response.ok) {
                 const result = await response.json();
-                alert('Login avvenuto con successo! Benvenuto!');
-                
+                alert('Login avvenuto con successo! Benvenuto, ' + result.user.username + '!');
+
                 // Salva lo stato dell'utente nel localStorage
                 localStorage.setItem('isLoggedIn', 'true');
-                localStorage.setItem('userEmail', email);
+                localStorage.setItem('username', result.user.username); // Salva il nome utente
+                localStorage.setItem('userEmail', result.user.email);   // Salva l'email
 
                 // Reindirizza l'utente alla dashboard
                 window.location.href = '/dashboard.html'; // Assicurati di avere questa pagina
