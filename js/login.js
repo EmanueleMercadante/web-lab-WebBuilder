@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('registration-form');
+    const form = document.getElementById('login-form');
     
     form.addEventListener('submit', async function(event) {
         event.preventDefault();
         
-        const username = document.getElementById('username').value.trim();
         const email = document.getElementById('email').value.trim();
         const password = document.getElementById('password').value.trim();
 
         // Validazione dei campi
-        if (!username || !email || !password) {
+        if (!email || !password) {
             alert('Tutti i campi sono obbligatori.');
             return;
         }
@@ -19,21 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        if (password.length < 6) {
-            alert('La password deve avere almeno 6 caratteri.');
-            return;
-        }
-
         // Crea un oggetto con i dati da inviare
         const data = {
-            username: username,
             email: email,
             password: password
         };
 
         try {
             // Invia i dati al server con una richiesta POST
-            const response = await fetch('/api/register', {
+            const response = await fetch('/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -44,15 +37,15 @@ document.addEventListener('DOMContentLoaded', function() {
             // Gestisci la risposta dal server
             if (response.ok) {
                 const result = await response.json();
-                alert('Registrazione completata! Benvenuto su Stack, ' + username + '!');
-                form.reset(); // Pulisci il form dopo la registrazione
+                alert('Login avvenuto con successo! Benvenuto!');
+                window.location.href = '/dashboard'; // Reindirizza a una dashboard
             } else {
                 const error = await response.json();
-                alert('Errore nella registrazione: ' + error.error);
+                alert('Errore nel login: ' + error.error);
             }
         } catch (error) {
-            console.error('Errore durante la registrazione:', error);
-            alert('Si è verificato un errore durante la registrazione.');
+            console.error('Errore durante il login:', error);
+            alert('Si è verificato un errore durante il login.');
         }
     });
 
