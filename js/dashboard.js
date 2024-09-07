@@ -4,7 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const username = localStorage.getItem('username');
     const email = localStorage.getItem('userEmail');
 
-  
+    if (!isLoggedIn || !email) {
+        // Se non è loggato, reindirizzalo alla pagina di login
+        window.location.href = '/login.html';
+        return;
+    }
 
     // Mostra il nome utente e l'email nella dashboard
     const userEmailElement = document.getElementById('userEmail');
